@@ -31,7 +31,7 @@ public class app extends Application {
 
 
             );
-            channel1.setDescription("gps is on ");
+            channel1.setVibrationPattern(new long[]{1000,1000,1000,1000,1000});
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);
 
