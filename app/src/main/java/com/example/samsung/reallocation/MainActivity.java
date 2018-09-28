@@ -9,12 +9,13 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 
 import java.nio.channels.Channel;
 
 import static com.example.samsung.reallocation.app.CHANNEL_1_ID;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     private NotificationManagerCompat notificationManager;
 
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Intent activityIntent =new Intent(this,MainActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this,0,activityIntent,0);
         Intent broadcastIntent =new Intent(this,NotificationReceiver.class);
-        
+
         broadcastIntent.putExtra("Toastmessage",0);
 PendingIntent actionIntent  =PendingIntent.getBroadcast(this,0,broadcastIntent ,PendingIntent.FLAG_UPDATE_CURRENT );
 
@@ -49,4 +50,6 @@ PendingIntent actionIntent  =PendingIntent.getBroadcast(this,0,broadcastIntent ,
            notificationManager.notify(1,notification);
 
     }
+
+
 }

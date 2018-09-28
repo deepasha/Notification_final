@@ -13,5 +13,5 @@
         android:text="Button"
         tools:layout_editor_absoluteX="171dp"
         tools:layout_editor_absoluteY="353dp"
-        android:onClick="setOnChannel"/>
+        android:onClick="sendOnChannel"/>
 </android.support.constraint.ConstraintLayout>
